@@ -16,7 +16,7 @@
 					<i class="fas fa-star"></i>
 				</a>
 				<a href="{% url 'todo:edit' task.id %}">
-					{{task.title | truncatewords:10 }}
+					{{task.title | truncatewords:15 }}
 				</a>
 				<a href="{% url 'todo:complete_task' task.id %}"
 				   class="{% if task.completed_date %}text-success {% endif %} mx-3"

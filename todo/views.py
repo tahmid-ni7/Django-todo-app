@@ -24,6 +24,7 @@ def all_tasks(request):
 
 @login_required()
 def create_todo(request):
+
     form = TaskForm()
 
     if request.method == "POST":
