@@ -3,10 +3,15 @@
 {% block title_block %}- All tasks{% endblock %}
 
 {% block body_block %}
-<div class="section-padding">
+<div class="section-padding pt-4">
 	<div class="container">
 		{% include 'partials/_alerts.html' %}
 		{% if tasks %}
+		<div class="text-center mb-2 d-block d-lg-none">
+			<a href="{% url 'todo:create' %}" class="btn btn-primary btn-sm">
+				<i class="fas fa-plus-circle"></i> Create task
+			</a>
+		</div>
 		<div class="display-4">All tasks list</div><br>
 		{% for task in tasks %}
 		<div class="border-light p-3 my-3 {% if task.important %} important-task {% else %} bg-light {% endif %}">
@@ -39,7 +44,7 @@
 		{% endfor %}
 		{% else %}
 		<div class="text-center">
-			<div class="display-3">You don't have any task yet.</div><br>
+			<div class="display-4">You don't have any task yet.</div><br>
 			<p class="display-5">After creating a task you can set it as an important task based on your preference. You can
 				checked a task after finishing that. You can also delete the unnecessary tasks.</p>
 			<a class="btn btn-primary btn-lg" href="{% url 'todo:create' %}">Create Task</a>
