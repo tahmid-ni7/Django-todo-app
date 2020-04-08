@@ -46,3 +46,7 @@ ul.errorlist{
 .border-light {
 	border: 1px solid #f7f7f7;
 }
+.card, .btn, .form-control, .alert
+{
+	border-radius: 0;
+}
