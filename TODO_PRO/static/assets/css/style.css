@@ -18,6 +18,8 @@ body
 .section-padding {
     padding: 100px 0;
 }
+/*********************************************/
+
 .welcome-text{
 	font-size: 18px;
 }
@@ -45,4 +47,8 @@ ul.errorlist{
 }
 .border-light {
 	border: 1px solid #f7f7f7;
+}
+.card, .btn, .form-control, .alert
+{
+	border-radius: 0;
 }
